@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src/",
+    "paths": {
+      "@application/*": ["application/*"],
+      "@application": ["application"],
+      "@presentation/*": ["presentation/*"],
+      "@presentation": ["presentation"],
+      "@assets/*": ["assets/*"],
+      "@assets": ["assets"],
+      "*": ["application/types/*.d.ts"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+build/**
+src/index.html
+flow-typed/**
+node_modules/**
+seed/node_modules/**
+locales/**

@@ -1,0 +1,12 @@
+{
+  "watch": ["src/", "esbuild.config.mjs", "locales/fr.json", "locales/nl.json"],
+  "ignore": ["node_modules/*", "build/*"],
+  "ext": "ts,mjs,js,json,graphql,tsx,jsx,cjs,scss,css",
+  "exec": "yarn build:local && yarn start:local",
+  "legacyWatch": true,
+  "events": {
+    "restart": "kill-port 8500",
+    "crash": "kill-port 8500"
+  },
+  "delay": 500
+}

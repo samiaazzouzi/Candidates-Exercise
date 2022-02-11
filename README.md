@@ -4,7 +4,7 @@ Using the scaffolding in place and the SpaceX public graphql api, build 2 pages.
 We'll be looking at your abilities to follow existing conventions and build a simple and clean design.
 
 ## Set-up
-Run `npm install` then `npm run dev` to lauch the local server.
+Run `npm install` then `npm run dev` to launch the local server.
 
 Please fork this repo and then [create a PR from your fork to this repo](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork) when you're done.
 

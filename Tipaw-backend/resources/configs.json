@@ -1,0 +1,5 @@
+{
+    "mongoConfig": {
+        "url": "mongodb://my-mongo:27017"
+    }
+}

@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  backend:
+    build: ../
+    image: backend-image
+    container_name: backend-container
+    ports:
+      - 3000:3000
+    volumes:
+      - ../src:/app/src
+      - ../resources:/app/resources
+      - ../package.json:/app/package.json
+    environment:
+      - CONFIG_PATH=/app/resources/configs.json
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    container_name: postgres-container
+    ports:
+      - 5432:5432

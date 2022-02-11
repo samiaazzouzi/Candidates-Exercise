@@ -26,7 +26,7 @@ You're expected to use:
 - Should be filterable by mission name, launch date, and site name.
 
 ### Details page
-- Should include a picture carousel (you can find pictures in the `launchesPast.links` resolver).
+- Should include a picture carousel (you can find pictures in the `launchesPast.links.filckr_images` resolver).
 - Should include more details about the launch than on the list items.
 
 ## Api

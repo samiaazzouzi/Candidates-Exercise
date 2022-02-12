@@ -12,6 +12,7 @@ services:
       - ./package.json:/app/package.json
     environment:
       - CONFIG_PATH=/app/resources/configs.json
+      - DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres?schema=public"
     depends_on:
       - postgres
   postgres:

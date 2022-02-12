@@ -1,0 +1,8 @@
+src
+resources
+node_modules
+.tscache
+.npmignore
+tsconfig.json
+tslint.json
+*.tgz

@@ -1,0 +1,12 @@
+export { FindUniqueProfessionalResolver } from "./Professional/FindUniqueProfessionalResolver";
+export { FindFirstProfessionalResolver } from "./Professional/FindFirstProfessionalResolver";
+export { FindManyProfessionalResolver } from "./Professional/FindManyProfessionalResolver";
+export { CreateProfessionalResolver } from "./Professional/CreateProfessionalResolver";
+export { CreateManyProfessionalResolver } from "./Professional/CreateManyProfessionalResolver";
+export { DeleteProfessionalResolver } from "./Professional/DeleteProfessionalResolver";
+export { UpdateProfessionalResolver } from "./Professional/UpdateProfessionalResolver";
+export { DeleteManyProfessionalResolver } from "./Professional/DeleteManyProfessionalResolver";
+export { UpdateManyProfessionalResolver } from "./Professional/UpdateManyProfessionalResolver";
+export { UpsertProfessionalResolver } from "./Professional/UpsertProfessionalResolver";
+export { AggregateProfessionalResolver } from "./Professional/AggregateProfessionalResolver";
+export { GroupByProfessionalResolver } from "./Professional/GroupByProfessionalResolver";

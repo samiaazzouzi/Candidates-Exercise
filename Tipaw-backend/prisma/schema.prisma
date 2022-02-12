@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator typegraphql {
+  provider = "typegraphql-prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Professional {
+  id                    String   @id @default(uuid())
+  firstname             String
+  lastname              String
+  langue                String
+  title                 String
+  email                 String
+  seo                   String
+  description           String
+  address               String
+  picture               String
+  paimentOption         String
+  appointmentSchedule   String
+}
+
+
+

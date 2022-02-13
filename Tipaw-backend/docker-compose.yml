@@ -5,7 +5,7 @@ services:
     image: backend-image
     container_name: backend-container
     ports:
-      - 3000:3000
+      - 4000:4000
     volumes:
       - ./src:/app/src
       - ./resources:/app/resources

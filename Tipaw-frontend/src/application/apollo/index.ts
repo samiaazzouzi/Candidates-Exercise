@@ -1,4 +1,4 @@
-import { ApolloClient, ApolloLink, createHttpLink, NormalizedCacheObject } from '@apollo/client';
+import { ApolloClient, ApolloLink, createHttpLink, HttpLink, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
 import { createUploadLink } from 'apollo-upload-client';
 import fetch from 'cross-fetch';
 import { cache } from './cache';
@@ -17,13 +17,26 @@ const browserHttpLink = createUploadLink({
   fetch,
 });
 
+// export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
+//   return new ApolloClient({
+//     cache: cache().restore(apolloState),
+//     link: generalLink().concat(browserHttpLink as any),
+//   });
+// };
+
 export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     cache: cache().restore(apolloState),
-    link: generalLink().concat(browserHttpLink as any),
+    link: browserHttpLink,
   });
 };
 
+// export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
+//   return new ApolloClient({
+//     cache: cache().restore(apolloState),
+//     uri: 'http://localhost:4000'
+//   });
+// };
 /**
  * SERVER
  */

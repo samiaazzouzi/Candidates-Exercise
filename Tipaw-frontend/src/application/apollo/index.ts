@@ -5,7 +5,9 @@ import { cache } from './cache';
 import { endpoint } from './endpoint';
 
 const generalLink = () => {
-  return new ApolloLink();
+  return new ApolloLink((operation, forward) => {
+    return forward(operation);
+  })
 };
 
 /**
@@ -17,26 +19,13 @@ const browserHttpLink = createUploadLink({
   fetch,
 });
 
-// export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
-//   return new ApolloClient({
-//     cache: cache().restore(apolloState),
-//     link: generalLink().concat(browserHttpLink as any),
-//   });
-// };
-
 export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     cache: cache().restore(apolloState),
-    link: browserHttpLink,
+    link: generalLink().concat(browserHttpLink as any),
   });
 };
 
-// export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
-//   return new ApolloClient({
-//     cache: cache().restore(apolloState),
-//     uri: 'http://localhost:4000'
-//   });
-// };
 /**
  * SERVER
  */

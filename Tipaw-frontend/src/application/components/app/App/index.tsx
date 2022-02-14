@@ -12,7 +12,6 @@ import utc from 'dayjs/plugin/utc';
 import { Helmet } from 'react-helmet';
 import { LandingPageController } from '@application/components/controllers/LandingPageController';
 import 'presentation/styles/css-reset.css';
-import 'bootstrap/dist/css/bootstrap.css';
 
 
 

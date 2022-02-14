@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+  backend:
+    build: Tipaw-backend
+    image: backend
+    container_name: backend
+    ports:
+      - 4000:4000
+    volumes:
+      - ./Tipaw-backend/src:/app/src
+      - ./Tipaw-backend/resources:/app/resources
+      - ./Tipaw-backend/package.json:/app/package.json
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres?schema=public
+    depends_on:
+      - postgres
+
+  frontend:
+    build: Tipaw-frontend
+    image: frontend
+    container_name: frontend
+    ports:
+      - 8500:8500
+    volumes:
+      - ./Tipaw-frontend/src:/app/src
+      - ./Tipaw-frontend/package.json:/app/package.json
+
+  postgres:
+    image: postgres
+    container_name: postgres-container
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres

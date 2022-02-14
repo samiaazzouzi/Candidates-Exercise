@@ -37,5 +37,45 @@ export const initProfessionals = [
         picture: "String",
         paimentOption: "String",
         appointmentSchedule: "String"
-    }
+    },
+
+    {
+        firstname: "sam3",
+        lastname: "azz3",
+        langue: "ar3",
+        title: "it",
+        email: "samazz3@gmail.com",
+        seo: "aaa",
+        description: "String",
+        address: "String",
+        picture: "String",
+        paimentOption: "String",
+        appointmentSchedule: "String"
+    },
+    {
+        firstname: "sam4",
+        lastname: "azz4",
+        langue: "ar4",
+        title: "it",
+        email: "samazz4@gmail.com",
+        seo: "aaa",
+        description: "String",
+        address: "String",
+        picture: "String",
+        paimentOption: "String",
+        appointmentSchedule: "String"
+    },
+    {
+        firstname: "sam5",
+        lastname: "azz5",
+        langue: "ar5",
+        title: "it",
+        email: "samazz5@gmail.com",
+        seo: "aaa",
+        description: "String",
+        address: "String",
+        picture: "String",
+        paimentOption: "String",
+        appointmentSchedule: "String"
+    },
 ]

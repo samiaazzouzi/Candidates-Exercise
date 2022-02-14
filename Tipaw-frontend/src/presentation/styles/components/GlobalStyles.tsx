@@ -1,5 +1,4 @@
 import { css, Global, useTheme } from '@emotion/react';
-import 'bootstrap/dist/css/bootstrap.css';
 
 export const GlobalStyles = () => {
   const theme = useTheme();

@@ -1,4 +1,5 @@
 import { css, Global, useTheme } from '@emotion/react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export const GlobalStyles = () => {
   const theme = useTheme();
@@ -37,22 +38,72 @@ export const GlobalStyles = () => {
         input,
         select,
         textarea,
-        button {
-          font-family: inherit;
-          border-radius: 0px;
-          background-color: transparent;
-          border: none;
-          outline: none;
-          text-decoration: none;
-          display: block;
-          box-shadow: none;
-          font-weight: 400;
+        .service-list {
+          list-style-type: none;
+          margin-left:0px;
+          padding-left:0px;
+          padding-bottom: 20px;
+          display: inline-block;
+        },
 
-          -webkit-appearance: none !important;
-          -moz-appearance: none !important;
-          appearance: none !important;
-          background-clip: padding-box;
-        }
+        .service-list img
+          {
+          float:left;
+          },
+        .service-list p,h3 {
+          text-align: right; 
+          display:inline-block;
+          padding-left: 10px;
+          },
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.user {
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #b3e3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+  margin: 20px;
+}
+
+.paginationBttns {
+  width: 80%;
+  height: 40px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.paginationBttns a {
+  padding: 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid #2b2eff;
+  color: #2b2eff;
+  cursor: pointer;
+}
+
+.paginationBttns a:hover {
+  color: white;
+  background-color: #2b2eff;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: #2b2eff;
+}
+
+
 
         input:disabled,
         textarea:disabled {

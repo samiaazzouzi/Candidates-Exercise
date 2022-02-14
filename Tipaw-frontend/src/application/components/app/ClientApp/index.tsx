@@ -2,8 +2,9 @@ import { ApolloProvider } from '@apollo/client';
 import { browserClient } from '@application/apollo';
 import { App } from '@application/components';
 import { BrowserRouter } from 'react-router-dom';
-import { RecoilRoot } from 'recoil';
 
+
+import { RecoilRoot } from 'recoil';
 export const ClientApp = () => {
   const { apolloState } = window;
 
@@ -19,3 +20,4 @@ export const ClientApp = () => {
     </ApolloProvider>
   );
 };
+

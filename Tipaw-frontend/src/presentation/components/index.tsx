@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { gql, useQuery } from '@apollo/client';
+import {PLACEHOLDER_IMAGE} from '../constants/index';
 
 const AllProfessionalsQuery = gql`
 query {
@@ -9,6 +10,9 @@ query {
     lastname
   }
 }`
+
+
+
 
 // skip : (pagenumber -1)* take
 //take: elementnumber by page ; example 15
@@ -28,8 +32,8 @@ query {
 // }
 
 
-
 export const LandingPage: FC = () => {
+
     const { data, loading, error } = useQuery(AllProfessionalsQuery)
     if (loading) return <p>Loading...</p>
     if (error) return <p>Oh no... {error.message}</p>  
@@ -39,18 +43,30 @@ export const LandingPage: FC = () => {
           <div>
             <ul>
               {data.professionals.map((professional: any) => (
-                <li key={professional.id}>
-                  <div className="p-5 flex flex-col space-y-2">
-                  <p className="text-sm text-blue-500">id: {professional.id}</p>
-                    <p className="text-sm text-blue-500">firstname: {professional.firstname}</p>
-                    <p className="text-sm text-blue-500">lastname: {professional.lastname}</p>
+                <li key={professional.id} className="service-list">
+                  <div>
+                    <img src={`${PLACEHOLDER_IMAGE}`} alt="icon" width="200" height="auto" ></img>
+                    <p>id: {professional.id}</p>
+                    <p>firstName: {professional.firstname}</p>
+                    <p>lastname: {professional.lastname}</p>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-          <button>Hello ...............</button>
+          <button type="button" className="btn btn-danger">Danger</button>
+          {/* <ul>
+            <li className="service-list">
+              <a href=""><img src="https://www.google.co.in/images/srpr/logo4w.png" alt="icon" width="200" height="auto" /></a>
+
+              <h3>Header</h3>
+              <p>
+                text goes here
+              </p>
+            </li>
+          </ul> */}
         </div >
       )
     }
 };
+

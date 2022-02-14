@@ -9,9 +9,12 @@ import duration from 'dayjs/plugin/duration';
 import minMax from 'dayjs/plugin/minMax';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import utc from 'dayjs/plugin/utc';
-import 'presentation/styles/css-reset.css';
 import { Helmet } from 'react-helmet';
 import { LandingPageController } from '@application/components/controllers/LandingPageController';
+import 'presentation/styles/css-reset.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
+
 
 dayjs.extend(duration);
 dayjs.extend(relativeTime);

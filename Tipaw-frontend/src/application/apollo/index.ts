@@ -19,16 +19,13 @@ const browserHttpLink = createUploadLink({
   fetch,
 });
 
+
 export const browserClient = (apolloState: any): ApolloClient<NormalizedCacheObject> => {
   return new ApolloClient({
     cache: cache().restore(apolloState),
     link: generalLink().concat(browserHttpLink as any),
   });
 };
-
-/**
- * SERVER
- */
 
 const serverHttpLink = createHttpLink({
   uri: endpoint(),

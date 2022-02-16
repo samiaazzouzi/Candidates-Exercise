@@ -5,6 +5,7 @@ export const GlobalStyles = () => {
   return (
     <Global
       styles={css`
+        @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
         :root {
           --toastify-toast-width: 400px;
           --toastify-text-color-light: ${theme.color.dark.default};
@@ -37,72 +38,22 @@ export const GlobalStyles = () => {
         input,
         select,
         textarea,
-        .service-list {
-          list-style-type: none;
-          margin-left:0px;
-          padding-left:0px;
-          padding-bottom: 20px;
-          display: inline-block;
-        },
+        button {
+          font-family: inherit;
+          border-radius: 0px;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          text-decoration: none;
+          display: block;
+          box-shadow: none;
+          font-weight: 400;
 
-        .service-list img
-          {
-          float:left;
-          },
-        .service-list p,h3 {
-          text-align: right; 
-          display:inline-block;
-          padding-left: 10px;
-          },
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
-}
-
-.user {
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #b3e3ff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 500px;
-  height: 300px;
-  margin: 20px;
-}
-
-.paginationBttns {
-  width: 80%;
-  height: 40px;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.paginationBttns a {
-  padding: 10px;
-  margin: 8px;
-  border-radius: 5px;
-  border: 1px solid #2b2eff;
-  color: #2b2eff;
-  cursor: pointer;
-}
-
-.paginationBttns a:hover {
-  color: white;
-  background-color: #2b2eff;
-}
-
-.paginationActive a {
-  color: white;
-  background-color: #2b2eff;
-}
-
-
+          -webkit-appearance: none !important;
+          -moz-appearance: none !important;
+          appearance: none !important;
+          background-clip: padding-box;
+        }
 
         input:disabled,
         textarea:disabled {
@@ -166,6 +117,49 @@ export const GlobalStyles = () => {
           font-size: 14px;
           position: relative;
         }
+
+        .pagination {
+          display: flex;
+          justify-content: center;
+          list-style: none;
+          margin-top: 20px;
+          padding: 0;
+         }
+         
+         .pagination a {
+          cursor: default;
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #6c7ac9;
+          color: #6c7ac9;
+          margin-left: 10px;
+         }
+         
+         .pagination li:not(.disabled) a:hover {
+          background-color: bisque;
+          cursor: pointer;
+         }
+         
+         .pagination li a {
+          font-weight: bold;
+         }
+         
+         .pagination li.active a {
+          color: #fff;
+          background: #6c7ac9;
+         }
+         
+         .pagination li.disabled a {
+          pointer-events: none;
+          color: rgb(198, 197, 202);
+          border: 1px solid rgb(198, 197, 202);
+         }
+         .prof-image {
+          width: 18rem
+         }
+         .pagniation-container {
+           text-align: center
+         }
       `}
     />
   );

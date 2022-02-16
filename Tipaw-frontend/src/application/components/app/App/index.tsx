@@ -11,7 +11,6 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import utc from 'dayjs/plugin/utc';
 import 'presentation/styles/css-reset.css';
 import { Helmet } from 'react-helmet';
-import { LandingPageController } from '@application/components/controllers/LandingPageController';
 
 dayjs.extend(duration);
 dayjs.extend(relativeTime);
@@ -30,7 +29,6 @@ export const App = () => {
       <ThemeProvider theme={lightTheme}>
         <GlobalStyles />
       </ThemeProvider>
-      <LandingPageController/>
     </>
   );
 };
